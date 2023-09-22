@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { Container } from 'react-bootstrap';
 import './App.css';
+import Navbar from './component/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import BookView from './pages/BookView';
+import BookDetail from './pages/BookDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<BookView />} />
+        <Route path='/book/:id' element={<BookDetail />} />
+      </Routes>
+    </Container>
   );
 }
 
