@@ -6,7 +6,8 @@ const BookDetail = () => {
     const { id } = useParams();
     const [books, setBooks] = useState(null)
     const getBookDetail = async() => {
-        let url = `http://localhost:5000/books/${id}`
+        //let url = `http://localhost:5000/books/${id}`
+        let url = `https://my-json-server.typicode.com/soreumKim/millie/books/${id}`
         let response = await fetch(url); 
         let data = await response.json();
 
