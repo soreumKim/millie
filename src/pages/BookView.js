@@ -9,7 +9,8 @@ const BookView = () => {
     const getBooks = async() => {
         let searchQuery = query.get('q')||"";
 
-        let url = `http://localhost:5000/books?q=${searchQuery}`
+        /* let url = `http://localhost:5000/books?q=${searchQuery}` */
+        let url = `https://my-json-server.typicode.com/soreumKim/millie/books?q=${searchQuery}`
         let response = await fetch(url);
         let data = await response.json();
 
