@@ -28,6 +28,7 @@ const Navbar = () => {
     <>
         <div className="logo">
             <Link to='/'><img src={require('../img/logo.png')} alt="" /></Link>
+            <Link to='/like' className='likeWrap'><img src={require('../img/heart_empty.png')} alt="" /> <span>찜 목록</span></Link>
         </div>
 
         <div className="menuArea">
